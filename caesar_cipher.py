@@ -1,6 +1,6 @@
-""" 
+"""
 A kind of cipher algorithm.
-    
+
     Functions:
         find_index: find the index of a given `char` in the given `string`.
         encrypt: Encrypting the given data with a key provided by the function.
@@ -11,6 +11,8 @@ A kind of cipher algorithm.
 from string import ascii_letters
 
 
+data_input = input('Enter your data: ')
+key_input = int(input('Enter steps: '))
 ALPHA = ascii_letters
 
 def find_index(string: str, char: str) -> int:
@@ -58,7 +60,7 @@ def decrypt(data: str, key: int) -> str:
     # Return decrypted function with a new key(reversed key)
     return encrypt(data=data, key=key)
 
-def brute_force(data):
+def brute_force(data: str) -> dict:
     """
     The brute force function for find the decrypted string from 1-52 steps.
     """
